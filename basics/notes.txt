@@ -1,0 +1,43 @@
+___________________________________________________________________
+*                     How the Web works
+___________________________________________________________________
+ User (enters)
+    - Page (via domain lookup) 
+ Browser (sends)
+    - Request (to server at domain's IP Address)
+ Server handles incoming requests ( via nodejs )
+ Responses and requests also have headers (metadata)
+    ^ Done via protocols (HTTP ; HTTPS)
+
+___________________________________________________________________
+*                  Creating a Node.js Server
+___________________________________________________________________
+- Create file named "server.js" or "app.js"
+ (Core modules : http   -> Lauch a server, send requests;
+                 https  -> Launch a SSL server;
+                 fs     -> filesystem;
+                 path   ->
+                 os     ->
+)
+___________________________________________________________________
+                   Node.js Program Lifecycle
+___________________________________________________________________
+node app.js     ->          start script             ->  
+                (parse code, register vars and func)
+THE NODE APP:   (EVENT LOOP - keeps on runnning as 
+                 long as there are event listeners)
+___________________________________________________________________
+*                   Use Node Core Modules
+___________________________________________________________________
+
+
+___________________________________________________________________
+*               Working with Requests & Responses
+___________________________________________________________________
+
+
+___________________________________________________________________
+*                 Async Code & The Event Loop
+___________________________________________________________________
+
+

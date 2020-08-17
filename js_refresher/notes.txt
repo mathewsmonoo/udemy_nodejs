@@ -1,0 +1,84 @@
+Nodejs is a JS runtime
+Manipulate DOM
+Used to run js outsie of the browser
+Uses V8
+    V8 -> js built by google to run in the browser
+          compiles nodejs to js to machine code
+          
+Nodejs  can run a server  (you code a server)
+        business logic    (ex. handle requests, verify inputs)
+        response side     (send back data)
+
+
+objects
+let <name> = {
+    key: name,
+};
+
+
+this 
+- is used to refer to global scope vars
+- to have it refer to something inside the object:
+    function() {
+        //myfunc ; 
+    }
+
+arrays
+    const hobbies = ['Sports', 'Cooking'];
+
+Reference types only store an address pointing at the place in memory where that array is stored.
+when adding to a const array, it wont give errors because the address where the const points is not changed.
+
+
+Destructuring
+    const functionName = ({ property1, 2, 3...}) => (1+2+3);
+    const printName = ({ name }) => console.log(name);
+
+Destructuring object and assigning its value to other vars
+    const { prop1, prop2 } = objectToGetPropertiesFrom;
+    const { name, age }    = person;
+
+let [value1, value2] = myArray;
+
+
+** Objects have prototypes(which are other objs). 
+   They'll 'inherit' properties from their prototypes. 
+   Simple Objects have Object.prototype as their prototype. 
+** Constructors can be used with <new> to create new objects.
+** Setters and getters to 'secretly' call methods everytime an object's
+   property is accessed. Static methods reside in class' cosntructors, instead of in the prototype
+** It is important to specify an interface for your objects. *Encapsulation.
+** Code written to use an interface knows how to work with different # of objects. -- POLYMORPHISM
+
+
+Async
+    Synchronous code: 
+      LOC executed one after the other.
+      *No delay other than the hardware.
+        console.log("Hello");
+        console.log("Hi");
+    Asynchronous code:
+      *Does not execute or finish immediately
+        setTimeout(() => {
+            console.log("2 seconds have passed!");
+        }, 1 );
+
+    **Synchronous code is executed before Asynchronous code.
+
+    JavaScript does not block code execution until that is done
+    Callback function:
+        Function should be executed in the future ;
+        Call back a function later on.
+
+Promises
+
+Prototypes
+    let protoObject = {
+        speak(line) {
+            console.log('The ${this.type} rabbit says "${line}"');
+        }
+    };
+    let derivedObject = Object.create(protoObject);
+    derivedObject.type = "White";
+    derivedObject.speak("I'm fluffly!");
+
